@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus-timer 2.0</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="timer">
+            <div class="time">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <div class="controls">
+                <button class="ph ph-play-circle"><span class="sr-only">Iniciar timer</span></button>
+                <button class="ph ph-pause-circle"><span class="sr-only">Pausar timer</span></button>
+                <button class="ph ph-stop-circle"><span class="sr-only">Zerar timer</span></button>
+                <button class="ph ph-plus-circle"><span class="sr-only">Adicionar mais cinco minutos</span></button>
+                <button class="ph ph-minus-circle"><span class="sr-only">Subtrair cinco minutos</span></button>
+            </div>
+        </div>
+
+        <div class="sound-buttons">
+            <button class="ph ph-tree"><span class="sr-only">Som de arvores</span></button>
+            <button class="ph ph-cloud-rain"><span class="sr-only">Som de chuva</span></button>
+            <button class="ph ph-storefront"><span class="sr-only">Som de cafeteria</span></button>
+            <button class="ph ph-fire"><span class="sr-only">Som de fogueira</span></button>
+        </div>
+    </div>
+</body>
+
+</html>
