@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="light">
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,18 @@
     <link rel="stylesheet" href="style.css">
 
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer type="module" src="./src/index.js"></script>
 
 </head>
 
 <body>
     <div id="app">
+        <button id="toogleThemeMode">
+            <span class="sr-only">Ativar dark mode</span>
+            <i class="ph ph-sun-dim"></i>
+            <i class="ph ph-moon"></i>
+        </button>
+
         <div class="timer">
             <div class="time">
                 <span id="minutes">25</span>
@@ -35,7 +42,7 @@
         </div>
 
         <div class="sound-buttons">
-            <button class="ph ph-tree"><span class="sr-only">Som de arvores</span></button>
+            <button class="ph ph-tree music-selected"><span class="sr-only">Som de arvores</span></button>
             <button class="ph ph-cloud-rain"><span class="sr-only">Som de chuva</span></button>
             <button class="ph ph-storefront"><span class="sr-only">Som de cafeteria</span></button>
             <button class="ph ph-fire"><span class="sr-only">Som de fogueira</span></button>
