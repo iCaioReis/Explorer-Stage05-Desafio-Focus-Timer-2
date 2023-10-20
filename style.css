@@ -40,14 +40,14 @@ body{
     color: var(--text-color);
     transition: .5s;
 }
-.controls{
+#controls{
     display: flex;
     gap: 4rem;
     margin-top: 1.4rem;
 
     transition: .5s;
 }
-.controls button, 
+#controls button, 
 #toogleThemeMode{
     background-color: transparent;
     border: 0;

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script defer type="module" src="./src/index.js"></script>
+    <script defer type="module" src="./src/main.js"></script>
 
 </head>
 
@@ -25,28 +25,28 @@
             <i class="ph ph-moon"></i>
         </button>
 
-        <div class="timer">
-            <div class="time">
+        <section class="timer">
+            <section class="time">
                 <span id="minutes">25</span>
                 <span>:</span>
                 <span id="seconds">00</span>
-            </div>
+            </section>
 
-            <div class="controls">
-                <button class="ph ph-play-circle"><span class="sr-only">Iniciar timer</span></button>
-                <!--<button class="ph ph-pause-circle"><span class="sr-only">Pausar timer</span></button>-->
-                <button class="ph ph-stop-circle"><span class="sr-only">Parar timer</span></button>
-                <button class="ph ph-plus-circle"><span class="sr-only">Adicionar mais cinco minutos</span></button>
-                <button class="ph ph-minus-circle"><span class="sr-only">Subtrair cinco minutos</span></button>
-            </div>
-        </div>
+            <section id="controls">
+                <button data-action="toggleRunning" id="btnPlayTimer" class="ph ph-play-circle"><span class="sr-only">Iniciar timer</span></button>
+                <button data-action="toggleRunning" id="btnPauseTimer" class="ph ph-pause-circle"><span class="sr-only">Pausar timer</span></button>
+                <button data-action="reset" id="btnStopTimer" class="ph ph-stop-circle"><span class="sr-only">Parar timer</span></button>
+                <button data-action="addTime" id="btnAddTime" class="ph ph-plus-circle"><span class="sr-only">Adicionar mais cinco minutos</span></button>
+                <button data-action="lessTime" id="btnLessTime" class="ph ph-minus-circle"><span class="sr-only">Subtrair cinco minutos</span></button>
+            </section>
+        </section>
 
-        <div class="sound-buttons">
+        <section class="sound-buttons">
             <button class="ph ph-tree music-selected"><span class="sr-only">Som de arvores</span></button>
             <button class="ph ph-cloud-rain"><span class="sr-only">Som de chuva</span></button>
             <button class="ph ph-storefront"><span class="sr-only">Som de cafeteria</span></button>
             <button class="ph ph-fire"><span class="sr-only">Som de fogueira</span></button>
-        </div>
+        </section>
     </div>
 </body>
 </html>
