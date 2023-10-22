@@ -1,10 +1,7 @@
 export default {
-    seconds: 12,
+    seconds: 0,
     minutes: 25,
     isRunning: false,
-    music1: false,
-    music2: false,
-    music3: false,
-    music4: false,
+    musicSelected: false,
     countDownId: null
 }

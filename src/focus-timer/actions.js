@@ -2,9 +2,16 @@ import state from "./state.js"
 import * as timer from "./timer.js"
 import * as elements from "./elements.js"
 
-export function togglerRunning (){}
+export function toggleRunning (){
+    state.isRunning = document.documentElement.classList.toggle('running')
+    timer.countDown()
+}
 
-export function reset(){}
+export function reset(){
+    state.isRunning = false
+    document.documentElement.classList.remove('running')
+    timer.updateDisplay()
+}
 
 export function addTime(){
     let minutes = parseInt(elements.timerMinutes.textContent) + 5

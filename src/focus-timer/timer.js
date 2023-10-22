@@ -8,3 +8,31 @@ export function updateDisplay (minutes, seconds){
     elements.timerMinutes.textContent = String(minutes).padStart(2,"0")
     elements.timerSeconds.textContent = String(seconds).padStart(2,"0")
 }
+
+export function countDown(){
+
+    clearTimeout(state.countDownId)
+
+    if(!state.isRunning){
+        return
+    }
+    
+    let minutes = Number (elements.timerMinutes.textContent)
+    let seconds = Number (elements.timerSeconds.textContent)
+
+    seconds--
+
+    if (seconds < 0){
+        minutes--
+        seconds = 59
+    }
+
+    if(minutes < 0){
+        reset()
+        return 0
+    }
+
+    updateDisplay(minutes,seconds)
+
+    state.countDownId = setTimeout( () => countDown(), 1000)
+}

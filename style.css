@@ -17,6 +17,8 @@ html:not(.light) {
     --buttons-music-color: #6b6b6b;
     --button-music-active: #53bfdf;
 }
+html:not(.running) .ph-pause-circle,
+.running  .ph-play-circle,
 html:not(.light) .ph-moon,
 .light .ph-sun-dim{
     display: none;
@@ -57,7 +59,7 @@ body{
     
     font-size: 6.4rem;
 }
-.sound-buttons{
+#sound-buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.2rem;
@@ -65,7 +67,7 @@ body{
     justify-items: center;
     padding: 0 4rem;
 }
-.sound-buttons button{
+#sound-buttons button{
     width: 13.8rem;
     height: 15.2rem;
     background-color: var(--buttons-music-color);
@@ -79,8 +81,10 @@ body{
 
     transition: .5s;
 }
-.sound-buttons button:hover,
-.sound-buttons .music-selected {
+.music1 #music1,
+.music2 #music2,
+.music3 #music3,
+.music4 #music4{
     background-color: var(--button-music-active);
     color: var(--background);
 }
@@ -111,5 +115,9 @@ body{
         flex-direction: row;
         gap: 7rem;
         align-items: center;
+    }
+    #sound-buttons button:hover{
+        background-color: var(--button-music-active);
+        color: var(--background);
     }
 }
