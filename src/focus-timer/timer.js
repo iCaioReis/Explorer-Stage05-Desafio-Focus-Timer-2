@@ -1,5 +1,7 @@
 import * as elements from "./elements.js"
 import state from "./state.js"
+import { reset } from "./actions.js"
+import { kichenTimer } from "./sounds.js"
 
 export function updateDisplay (minutes, seconds){
     minutes = minutes ?? state.minutes
@@ -28,6 +30,7 @@ export function countDown(){
     }
 
     if(minutes < 0){
+        kichenTimer.play()
         reset()
         return 0
     }

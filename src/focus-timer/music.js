@@ -8,7 +8,6 @@ export function selectMusic(music) {
     }
 
     if (state.musicSelected == music) {
-        console.log("reset")
         state.musicSelected = false
         controlsMusic.classList = ''
         return
@@ -18,7 +17,6 @@ export function selectMusic(music) {
     controlsMusic.classList = music
 
     if (typeof sounds[state.musicSelected] == "undefined") {
-        console.log("reset")
         state.musicSelected = false
         controlsMusic.classList = ''
         return
